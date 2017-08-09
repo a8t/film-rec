@@ -17,10 +17,15 @@ while true
   if (doc_ans.to_i > 5 || doc_ans.to_i < 1)
     puts "You entered something wrong! Please try again."
     redo
-    # .to_i returns 0 when applied to a string that isn't an integer.
-    # i.e. this also catches if they enter a non-integer and then it restarts the While. 
+    # String.to_i returns 0 when applied to a string that isn't an integer.
+    # i.e. this also catches if they enter a non-integer and then it restarts the While.
   end
 
+
+  # the threshold of 4/5 isn't really relevant given the Stretch Challenge.
+  # in all cases, we only care about the maximum value (or values plural if drama = comedy > documentary)
+  # the case where the 4/5 threshold is relevant is if drama = comedy = documentary < 4, in which case
+  # they don't really like movies and should read a book. 
   if doc_ans > drama_ans && doc_ans > comedy_ans
     puts "You like documentaries! You should watch #{documentary}."
     break
@@ -36,7 +41,5 @@ while true
   elsif (doc_ans == drama_ans && drama_ans == comedy_ans && doc_ans.to_i < 4)
     puts "Seems like you don't like movies that much. If you'd like to read a book, I recommend Norwegian Wood."
     break
-  else
-
   end
 end
