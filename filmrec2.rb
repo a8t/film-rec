@@ -25,7 +25,7 @@ while true
   # the threshold of 4/5 isn't really relevant given the Stretch Challenge.
   # in all cases, we only care about the maximum value (or values plural if drama = comedy > documentary)
   # the case where the 4/5 threshold is relevant is if drama = comedy = documentary < 4, in which case
-  # they don't really like movies and should read a book. 
+  # they don't really like movies and should read a book.
   if doc_ans > drama_ans && doc_ans > comedy_ans
     puts "You like documentaries! You should watch #{documentary}."
     break

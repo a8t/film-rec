@@ -1,4 +1,4 @@
-documentary = "The Murder of Fred Hamption"
+documentary = "The Murder of Fred Hampton"
 drama = "The Godfather"
 comedy = "The Big Sick"
 dramedy = "In Bruges"
@@ -15,7 +15,7 @@ while true
     puts "You like documentaries! You should watch #{documentary}."
     break
   elsif doc_ans != 'n'
-    puts "You answered gave an invalid answer! Try again."
+    puts "You gave an invalid answer! Try again."
     redo
   end
 
@@ -44,4 +44,4 @@ while true
     redo
     # if the inputs were bad, loop back to the beginning.
   end
-end
+# end
